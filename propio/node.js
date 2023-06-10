@@ -8,21 +8,68 @@ var carrdet = document.querySelector('.product-detail');
 // CONTENEDOR DE ELEMENTOS
 var contenedor = document.querySelector('.cards-container');
 
-for (let i = 0; i < 7; i++) {   
-    contenedor.innerHTML+= 
-    ` <div class="product-card ${i}">
-<img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
-<div class="product-info">
-  <div>
-    <p>$120,00</p>
-    <p>Bike</p>
-  </div>
-  <figure>
-    <img src="./icons/bt_add_to_cart.svg" alt="">
-  </figure>
-</div>
-</div>`;
+var lista = [];
+lista.push({
+    nombre: 'Bicicleta',
+    precio: '120',
+    imagen: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
+})
+
+lista.push({
+    nombre: 'Carro',
+    precio: '240M',
+    imagen: 'https://www.bmw.com.co/content/dam/bmw/common/all-models/m-series/series-overview/bmw-m-series-seo-overview-ms-04.jpg/jcr:content/renditions/cq5dam.resized.img.585.low.time1674651825572.jpg'
+})
+
+lista.push({
+    nombre: 'Moto',
+    precio: '80M',
+    imagen: 'https://www.incolmotos-yamaha.com.co/wp-content/uploads/2020/02/R1-2022-02.jpg'
+})
+
+
+var iniciarRender=(lista)=>{
+    var esribirHTML = (imagen,precio,nombres)=>{
+        contenedor.innerHTML+= 
+        ` <div class="product-card">
+    <img src="${imagen}" alt="">
+    <div class="product-info">
+      <div>
+        <p>$${precio}</p>
+        <p>${nombres}</p>
+      </div>
+      <figure>
+        <img src="./icons/bt_add_to_cart.svg" alt="">
+      </figure>
+    </div>
+    </div>`;
+    }
+    let a;
+   /*
+    for (i = 0; i < lista.length; i++) {
+        nombres=lista[i].nombre;
+        precio=lista[i].precio;
+        imagen=lista[i].imagen;
+        esribirHTML(imagen,precio,nombres);
+
+    }
+    */
+    for(objeto of lista){
+        nombress=objeto.nombre;
+        precios=objeto.precio;
+        images=objeto.imagen;
+        a =+ esribirHTML(images,precios,nombress);
+    }
+
+    return a
 }
+
+iniciarRender(lista);
+iniciarRender(lista);
+
+
+
+// INTERRUPCIONES, FUNCIONES Y SUS CONDICIONES GRÁFICAS
 
 mail.addEventListener('click', aparydesapd);
 menu.addEventListener('click', aparydesapm);
