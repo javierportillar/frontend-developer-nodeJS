@@ -120,7 +120,6 @@ function renderProductDetail(arr) {
     
     // productInfoDetail.appendChild(primaryButton);
   }
-
   /* 
    <div class="product-detail-closed">
       <img src="./icons/icon_close.png" alt="close">
