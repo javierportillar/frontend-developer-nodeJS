@@ -51,21 +51,23 @@ function toggleCarritoAside() {
   mobileMenu.classList.add("inactive");
   shoppingCartContainer.classList.toggle("inactive");
   productDetail.classList.add("inactive");
+  cardsContainer.classList.add(".oscuro")
 }
 
 function abrirProductDetail() {
   desktopMenu.classList.add("inactive");
   shoppingCartContainer.classList.add("inactive");
   productDetail.classList.remove("inactive");
+  cardsContainer.classList.add(".oscuro")
 
  // renderProductDetail(productList);
 }
 function cerrarProductDetail() {
 
-  console.log("HEY")
   productDetail.classList.add("inactive");
   desktopMenu.classList.add("inactive");
   shoppingCartContainer.classList.add("inactive");
+  cardsContainer.classList.remove(".oscuro")
 }
 
 
